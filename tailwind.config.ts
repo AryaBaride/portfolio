@@ -61,7 +61,23 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'hero-accent': 'hsl(var(--hero-accent))',
+				'hero-secondary': 'hsl(var(--hero-secondary))',
+				'section-bg': 'hsl(var(--section-bg))',
+				'card-hover': 'hsl(var(--card-hover))'
+			},
+			backgroundImage: {
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-card': 'var(--gradient-card)',
+				'gradient-border': 'var(--gradient-border)'
+			},
+			boxShadow: {
+				'card': 'var(--shadow-card)',
+				'hero': 'var(--shadow-hero)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
