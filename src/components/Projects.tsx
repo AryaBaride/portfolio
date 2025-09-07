@@ -6,32 +6,32 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "Kubernetes CI/CD Pipeline",
-      description: "Automated deployment pipeline using Jenkins, Docker, and Kubernetes with GitOps workflows",
-      tags: ["Kubernetes", "Jenkins", "Docker", "GitOps", "Helm"],
-      github: "#",
-      demo: "#",
+      title: "Docker CI/CD Pipeline",
+      description: "A containerized application which will help you track all your tasks",
+      tags: ["Docker", "Python", "Flask", "Node.js"],
+      github: "https://github.com/AryaBaride/Docker-Flask-app",
+     
     },
     {
-      title: "Infrastructure as Code",
-      description: "Terraform modules for AWS infrastructure provisioning with multi-environment support",
-      tags: ["Terraform", "AWS", "CloudFormation", "Ansible"],
-      github: "#",
-      demo: "#",
+      title: "Node.js application deployment",
+      description: "A nodejs application deployment using docker",
+      tags: ["Docker", "Node.js", "Javascript"],
+      github: "https://github.com/AryaBaride/node-application-deployment",
+      
     },
     {
-      title: "Monitoring Stack",
-      description: "Complete observability solution with Prometheus, Grafana, and ELK stack",
-      tags: ["Prometheus", "Grafana", "ELK", "Monitoring", "Alerting"],
-      github: "#",
-      demo: "#",
+      title: "Shell Scripting Automation",
+      description: "A shell script that lists all the running resources in your AWS account",
+      tags: ["Shell", "AWS CLI"],
+      github: "https://github.com/AryaBaride/aws-resource-tracker",
+      
     },
     {
-      title: "Microservices Architecture",
-      description: "Containerized microservices deployment with service mesh and API gateway",
-      tags: ["Microservices", "Istio", "Kong", "Docker", "K8s"],
-      github: "#",
-      demo: "#",
+      title: "Auto-rotational Backup",
+      description: "A shell script that automates creation and maintains backup of your files",
+      tags: ["Shell" , "AWS CLI"],
+      github: "https://github.com/AryaBaride/auto-rotation",
+      
     },
   ];
 
@@ -62,28 +62,30 @@ const Projects = () => {
                   {project.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <Badge 
-                      key={tag} 
-                      variant="secondary" 
-                      className="bg-secondary/50 text-hero-accent border-hero-accent/20"
-                    >
+
+
+              <CardContent>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag, i) => (
+                    <Badge key={i} variant="secondary">
                       {tag}
                     </Badge>
                   ))}
                 </div>
-                <div className="flex gap-4 pt-4">
-                  <Button variant="outline" size="sm" className="border-hero-accent/30 hover:border-hero-accent">
-                    <Github className="mr-2 h-4 w-4" />
-                    Code
-                  </Button>
-                  <Button size="sm" className="bg-hero-accent hover:bg-hero-accent/90">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Live Demo
-                  </Button>
-                </div>
+
+                {/* GitHub Button */}
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-hero-accent hover:bg-hero-accent/90">
+                      <Github className="mr-2 h-4 w-4" />
+                      GitHub
+                    </Button>
+                  </a>
+                )}
               </CardContent>
             </Card>
           ))}

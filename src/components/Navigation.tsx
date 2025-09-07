@@ -25,7 +25,7 @@ const Navigation = () => {
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <h2 className="text-2xl font-bold text-hero-accent">Portfolio</h2>
+          <h2 className="text-2xl font-bold text-hero-accent">Arya Baride</h2>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
@@ -34,7 +34,7 @@ const Navigation = () => {
                 key={item.id}
                 variant="ghost"
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-hero-accent transition-colors"
+                className="text-foreground hover:text-hero-accent hover:bg-transparent transition-colors text-xg"
               >
                 {item.label}
               </Button>

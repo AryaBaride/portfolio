@@ -6,71 +6,57 @@ import { Download, MapPin, Calendar } from "lucide-react";
 const Resume = () => {
   const experiences = [
     {
-      title: "Senior DevOps Engineer",
-      company: "TechCorp Inc.",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
-      description: "Leading infrastructure automation and CI/CD initiatives for a team of 50+ developers.",
+      title: "Bachelors of Engineering in Information Technology",
+      company: "Savitribai Phule Pune University",
+      location: "Pune, Maharashtra",
+      period: "2022 - 2025",
+      description: "",
       achievements: [
-        "Reduced deployment time by 75% through automated CI/CD pipelines",
-        "Implemented infrastructure as code reducing provisioning time from hours to minutes",
-        "Designed and maintained Kubernetes clusters serving 1M+ daily users",
+        
       ],
     },
     {
-      title: "DevOps Engineer",
-      company: "CloudStart Solutions",
-      location: "Austin, TX",
-      period: "2020 - 2022",
-      description: "Focused on cloud migration and containerization of legacy applications.",
+      title: "Diploma in Information Technology",
+      company: "Government Polytechnic Pune",
+      location: "Pune, Maharashtra",
+      period: "2019 - 2022",
+      description: "",
       achievements: [
-        "Successfully migrated 15+ applications to AWS cloud infrastructure",
-        "Implemented monitoring and alerting reducing MTTR by 60%",
-        "Automated deployment processes using Jenkins and Docker",
+    
       ],
     },
-    {
-      title: "Systems Administrator",
-      company: "DataFlow Corp",
-      location: "Boston, MA",
-      period: "2018 - 2020",
-      description: "Managed on-premise infrastructure and began transition to cloud technologies.",
-      achievements: [
-        "Maintained 99.9% uptime for critical business applications",
-        "Implemented backup and disaster recovery procedures",
-        "Introduced configuration management using Ansible",
-      ],
-    },
+
   ];
 
   const skills = [
-    { category: "Cloud Platforms", items: ["AWS", "Azure", "Google Cloud", "DigitalOcean"] },
-    { category: "Containerization", items: ["Docker", "Kubernetes", "Helm", "Docker Swarm"] },
-    { category: "CI/CD Tools", items: ["Jenkins", "GitLab CI", "GitHub Actions", "ArgoCD"] },
-    { category: "Infrastructure as Code", items: ["Terraform", "CloudFormation", "Pulumi", "Ansible"] },
+    { category: "Cloud Platforms", items: ["AWS"] },
+    { category: "Containerization", items: ["Docker", "Docker Compose"] },
+    { category: "CI/CD Tools", items: ["Jenkins", "GitHub Actions"] },
+    { category: "Infrastructure as Code", items: ["Terraform", "CloudFormation", "Ansible"] },
     { category: "Monitoring", items: ["Prometheus", "Grafana", "ELK Stack", "Datadog"] },
     { category: "Scripting", items: ["Python", "Bash", "PowerShell", "Go"] },
   ];
 
   return (
-    <section id="resume" className="py-20 bg-section-bg">
+    <section id="/resume.pdf" className="py-20 bg-section-bg">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Professional <span className="text-hero-accent">Experience</span>
+             <span className="text-hero-accent"></span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Over 6 years of experience in DevOps, cloud infrastructure, and automation.
-          </p>
+          
+          
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
           <Button className="bg-hero-accent hover:bg-hero-accent/90">
-            <Download className="mr-2 h-4 w-4" />
-            Download Resume
+          <Download className="mr-2 h-4 w-4" />
+          Download Resume
           </Button>
+        </a>
         </div>
 
         {/* Experience Timeline */}
         <div className="max-w-4xl mx-auto mb-16">
-          <h3 className="text-2xl font-bold mb-8 text-center">Work Experience</h3>
+          <h3 className="text-2xl font-bold mb-8 text-center">Educational Details</h3>
           <div className="space-y-8">
             {experiences.map((exp, index) => (
               <Card key={index} className="bg-gradient-card border-border">

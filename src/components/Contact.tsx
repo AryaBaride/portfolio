@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, MapPin, Phone, Send, Github, Linkedin, } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 const Contact = () => {
@@ -36,40 +36,25 @@ const Contact = () => {
     {
       icon: <Mail className="h-5 w-5" />,
       label: "Email",
-      value: "hello@devopsportfolio.com",
-      link: "mailto:hello@devopsportfolio.com",
-    },
-    {
-      icon: <Phone className="h-5 w-5" />,
-      label: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
-    },
-    {
-      icon: <MapPin className="h-5 w-5" />,
-      label: "Location",
-      value: "San Francisco, CA",
-      link: "#",
+      value: "contact.aryabaride@gmail.com",
+      link: "mailto:contact.aryabaride@gmail.com",
     },
   ];
 
   const socialLinks = [
-    { icon: <Github className="h-5 w-5" />, label: "GitHub", link: "#" },
-    { icon: <Linkedin className="h-5 w-5" />, label: "LinkedIn", link: "#" },
-    { icon: <Twitter className="h-5 w-5" />, label: "Twitter", link: "#" },
+    { icon: <Github className="h-5 w-5" />, label: "GitHub", link: "https://github.com/AryaBaride/" },
+    { icon: <Linkedin className="h-5 w-5" />, label: "LinkedIn", link: "https://www.linkedin.com/in/aryabaride/" },
+    
   ];
 
   return (
     <section id="contact" className="py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-3xl font-bold mb-4">
             Let's <span className="text-hero-accent">Connect</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to discuss your next DevOps project or infrastructure challenge? 
-            I'd love to hear from you!
-          </p>
+          
         </div>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -82,6 +67,7 @@ const Contact = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
+              
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -144,9 +130,7 @@ const Contact = () => {
             <Card className="bg-gradient-card border-border">
               <CardHeader>
                 <CardTitle className="text-2xl text-hero-accent">Contact Information</CardTitle>
-                <CardDescription>
-                  Feel free to reach out through any of these channels.
-                </CardDescription>
+               
               </CardHeader>
               <CardContent className="space-y-6">
                 {contactInfo.map((info, index) => (
@@ -168,28 +152,7 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-card border-border">
-              <CardHeader>
-                <CardTitle className="text-2xl text-hero-accent">Follow Me</CardTitle>
-                <CardDescription>
-                  Connect with me on social media for the latest updates.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex gap-4">
-                  {socialLinks.map((social, index) => (
-                    <Button
-                      key={index}
-                      variant="outline"
-                      size="icon"
-                      className="border-hero-accent/30 hover:border-hero-accent hover:bg-hero-accent/10"
-                    >
-                      {social.icon}
-                    </Button>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+          
           </div>
         </div>
       </div>

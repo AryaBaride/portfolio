@@ -18,7 +18,7 @@ const Index = () => {
       </main>
       <footer className="py-8 border-t border-border bg-section-bg">
         <div className="container mx-auto px-6 text-center text-muted-foreground">
-          <p>&copy; 2024 DevOps Portfolio. Built with React, TypeScript & Tailwind CSS.</p>
+          <p>&copy; 2024 Arya Baride Portfolio. Built with React, TypeScript & Tailwind CSS.</p>
         </div>
       </footer>
     </div>
