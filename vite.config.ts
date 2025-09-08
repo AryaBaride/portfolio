@@ -2,21 +2,19 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-
-export default defineConfig(({ mode }) => ({
-  server: {
-    host: "::",
-    port: 8080,
-  },
+export default defineConfig({
+  // Set the base path directly for GitHub Pages.
+  base: "/pipeline-portrait/",
   plugins: [
     react(),
-
   ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // 👇 only use base when building for production
-  base: mode === "production" ? "/pipeline-portrait/" : "/",
-}));
+  server: {
+    host: "::",
+    port: 8080,
+  },
+});
