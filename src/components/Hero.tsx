@@ -28,7 +28,7 @@ const Hero = () => {
           {/* Profile Picture */}
       <div className="mb-8 relative">
         <Avatar className="w-40 h-40 mx-auto mb-6 mt-3 ring-4 ring-hero-accent shadow-hero rounded-full overflow-hidden">
-          <AvatarImage src="/photo1.jpg" alt="Profile" className="object-cover" translate-y-2 />
+          <AvatarImage src="/photo1.jpg" alt="Profile /" className="object-cover" translate-y-2 />
           <AvatarFallback className="text-4xl font-bold bg-gradient-card rounded-full">Dev</AvatarFallback>
         </Avatar>
         <div className="absolute -top-2 -right-2 w-6 h-6 bg-hero-accent rounded-full animate-pulse" />

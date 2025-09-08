@@ -13,10 +13,10 @@ const Projects = () => {
      
     },
     {
-      title: "Node.js application deployment",
-      description: "A nodejs application deployment using docker",
-      tags: ["Docker", "Node.js", "Javascript"],
-      github: "https://github.com/AryaBaride/node-application-deployment",
+      title: "Ansible Playbooks for Nginx",
+      description: "A playbook that installs and configures Nginx on multiple servers",
+      tags: ["Ansible", "AWS", "Configuration Management"],
+      github: "https://github.com/AryaBaride/ansible-playbook-nginx",
       
     },
     {
@@ -33,6 +33,19 @@ const Projects = () => {
       github: "https://github.com/AryaBaride/auto-rotation",
       
     },
+    {
+      title: "Golang REST API",
+      description: "A REST API application built with Golang",
+      tags: ["Golang" , "Github"],
+      github: "https://github.com/AryaBaride/Golang-ticket-booking-application",
+    },
+    {
+      title: "Deployment of Strapi CMS using Terraform",
+      description: "Infrastructure as Code project to deploy Strapi CMS on AWS using Terraform",
+      tags: ["Terraform" , "Strapi" , "AWS"],
+      github: "https://github.com/AryaBaride/strapi-terraform",
+    },
+
   ];
 
   return (

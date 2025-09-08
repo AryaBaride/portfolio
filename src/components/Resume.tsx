@@ -38,7 +38,7 @@ const Resume = () => {
   ];
 
   return (
-    <section id="/resume.pdf" className="py-20 bg-section-bg">
+    <section id="resume" className="py-20 bg-section-bg">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -46,7 +46,7 @@ const Resume = () => {
           </h2>
           
           
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="resume.pdf" target="_blank" rel="noopener noreferrer">
           <Button className="bg-hero-accent hover:bg-hero-accent/90">
           <Download className="mr-2 h-4 w-4" />
           Download Resume
