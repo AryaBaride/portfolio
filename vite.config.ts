@@ -4,7 +4,7 @@ import path from "path";
 
 export default defineConfig({
   // Set the base path directly for GitHub Pages.
-  base: "./",
+  base: "/portfolio/",
   plugins: [
     react(),
   ],
