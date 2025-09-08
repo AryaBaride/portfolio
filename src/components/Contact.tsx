@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, MapPin, Phone, Send, Github, Linkedin, } from "lucide-react";
+import { Mail, Send, Github, Linkedin } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 const Contact = () => {
@@ -16,13 +16,36 @@ const Contact = () => {
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", subject: "", message: "" });
+
+    try {
+      const response = await fetch("https://formspree.io/f/mjkejeob", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again.",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Network error. Please try again later.",
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -44,7 +67,6 @@ const Contact = () => {
   const socialLinks = [
     { icon: <Github className="h-5 w-5" />, label: "GitHub", link: "https://github.com/AryaBaride/" },
     { icon: <Linkedin className="h-5 w-5" />, label: "LinkedIn", link: "https://www.linkedin.com/in/aryabaride/" },
-    
   ];
 
   return (
@@ -54,7 +76,6 @@ const Contact = () => {
           <h2 className="text-3xl md:text-3xl font-bold mb-4">
             Let's <span className="text-hero-accent">Connect</span>
           </h2>
-          
         </div>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -67,7 +88,6 @@ const Contact = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -130,7 +150,6 @@ const Contact = () => {
             <Card className="bg-gradient-card border-border">
               <CardHeader>
                 <CardTitle className="text-2xl text-hero-accent">Contact Information</CardTitle>
-               
               </CardHeader>
               <CardContent className="space-y-6">
                 {contactInfo.map((info, index) => (
@@ -151,8 +170,6 @@ const Contact = () => {
                 ))}
               </CardContent>
             </Card>
-
-          
           </div>
         </div>
       </div>
