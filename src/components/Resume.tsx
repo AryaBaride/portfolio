@@ -46,7 +46,7 @@ const Resume = () => {
           </h2>
           
           
-          <a href="resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="Resume.pdf" target="_blank" rel="noopener noreferrer">
           <Button className="bg-hero-accent hover:bg-hero-accent/90">
           <Download className="mr-2 h-4 w-4" />
           Download Resume
