@@ -48,11 +48,11 @@ const Resume = () => {
           
           {/* ✅ Opens Resume.pdf in a new tab on GitHub Pages */}
         <a
-          href={`${process.env.PUBLIC_URL}/Resume.pdf`}
+          href={`${process.env.PUBLIC_URL}/resume.pdf`}
           target="_blank"
           rel="noopener noreferrer"
         >
-          
+
           <Button className="bg-hero-accent hover:bg-hero-accent/90">
           <Download className="mr-2 h-4 w-4" />
           Download Resume
