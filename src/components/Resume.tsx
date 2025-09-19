@@ -46,7 +46,7 @@ const Resume = () => {
           </h2>
           
           
-          <a href="Resume.pdf" download="My_Resume.pdf" rel="noopener noreferrer">
+          <a href="${process.env.PUBLIC_URL}/Resume.pdf" download="My_Resume.pdf" rel="noopener noreferrer">
           <Button className="bg-hero-accent hover:bg-hero-accent/90">
           <Download className="mr-2 h-4 w-4" />
           Download Resume
