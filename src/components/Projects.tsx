@@ -20,10 +20,10 @@ const Projects = () => {
       
     },
     {
-      title: "Shell Scripting Automation",
-      description: "A shell script that lists all the running resources in your AWS account",
-      tags: ["Shell", "AWS CLI"],
-      github: "https://github.com/AryaBaride/aws-resource-tracker",
+      title: "Django-Blog-App",
+      description: "Developed a Django-powered Blog Application with end-to-end CRUD operations, user authentication, and role-based access, allowing users to securely register, log in, and manage personalized blog posts.",
+      tags: ["Python", "Django", "SQLite", "HTML", "CSS"],
+      github: "https://github.com/AryaBaride/Django-Blogging-website",
       
     },
     {
@@ -56,7 +56,7 @@ const Projects = () => {
             Featured <span className="text-hero-accent">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Here are some of my recent DevOps projects showcasing infrastructure automation, 
+            Here are some of my recent projects showcasing infrastructure automation, 
             CI/CD pipelines, and cloud architecture.
           </p>
         </div>
