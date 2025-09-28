@@ -21,7 +21,7 @@ const Projects = () => {
     },
     {
       title: "Django-Blog-App",
-      description: "Developed a Django-powered Blog Application with end-to-end CRUD operations, user authentication, and role-based access, allowing users to securely register, log in, and manage personalized blog posts.",
+      description: "Developed a Django-powered Blog Application with end-to-end CRUD operations, user authentication, and role-based access, allowing users to manage personalized blog posts.",
       tags: ["Python", "Django", "SQLite", "HTML", "CSS"],
       github: "https://github.com/AryaBaride/Django-Blogging-website",
       
